@@ -102,7 +102,7 @@ namespace MY_SuperBit {
     
     export enum enServo {
         
-        S1 = 10,
+        S1 = 0,
         S2,
         S3,
         S4,
@@ -112,9 +112,9 @@ namespace MY_SuperBit {
         S8
     }
     export enum enMotors {
-        M1 = 3,
-        M2 = 4,
-        M3 = 5,
+        M1 = 1,
+        M2 = 2,
+        M3 = 4,
         M4 = 6
     }
 
