@@ -71,8 +71,8 @@ namespace SuperBit {
 
     
     export enum enSteppers {
-        B1 = 0x1,
-        B2 = 0x2
+        B1 = 0x2,
+        B2 = 0x1
     }
     export enum enPos { 
         //% blockId="forward" block="forward"
