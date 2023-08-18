@@ -101,21 +101,21 @@ namespace MY_SuperBit10 {
     }
     
     export enum enServo {
-        
-        S1 = 1,
-        S2 = 2,
-        S3 = 4,
-        S4 = 6,
-        S5,
-        S6,
-        S7,
-        S8
+
+        S1 = 0x01,
+        S2 = 0x02,
+        S3 = 0x03,
+        S4 = 0x04,
+        S5 = 0x05,
+        S6 = 0x06,
+        S7 = 0x07,
+        S8 = 0x08
     }
     export enum enMotors {
-        M1 = 7,
-        M2 = 8,
-        M3 = 9,
-        M4 = 10
+        M1 = 0x3,
+        M2 = 0x4,
+        M3 = 0x1,
+        M4 = 0x2
     }
 
     function i2cwrite(addr: number, reg: number, value: number) {
