@@ -102,7 +102,7 @@ namespace MY_SuperBit {
     
     export enum enServo {
         
-        S1 = 0,
+        S1 = 8,
         S2,
         S3,
         S4,
