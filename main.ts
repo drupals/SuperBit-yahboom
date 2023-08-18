@@ -112,10 +112,10 @@ namespace SuperBit {
         S8
     }
     export enum enMotors {
-        M1 = 8,
-        M2 = 10,
-        M3 = 12,
-        M4 = 14
+        M1 = 3,
+        M2 = 4,
+        M3 = 1,
+        M4 = 2
     }
 
     function i2cwrite(addr: number, reg: number, value: number) {
