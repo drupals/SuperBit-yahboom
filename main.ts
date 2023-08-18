@@ -177,34 +177,34 @@ namespace MY_SuperBit12 {
     function setStepper(index: number, dir: boolean): void {
         if (index == enSteppers.B1) {
             if (dir) {
-                setPwm(11, STP_CHA_L, STP_CHA_H);
-                setPwm(9, STP_CHB_L, STP_CHB_H);
-                setPwm(10, STP_CHC_L, STP_CHC_H);
-                setPwm(8, STP_CHD_L, STP_CHD_H);
+                setPwm(0, STP_CHA_L, STP_CHA_H);
+                setPwm(2, STP_CHB_L, STP_CHB_H);
+                setPwm(1, STP_CHC_L, STP_CHC_H);
+                setPwm(3, STP_CHD_L, STP_CHD_H);
             } else {
-                setPwm(8, STP_CHA_L, STP_CHA_H);
-                setPwm(10, STP_CHB_L, STP_CHB_H);
-                setPwm(9, STP_CHC_L, STP_CHC_H);
-                setPwm(11, STP_CHD_L, STP_CHD_H);
+                setPwm(3, STP_CHA_L, STP_CHA_H);
+                setPwm(1, STP_CHB_L, STP_CHB_H);
+                setPwm(2, STP_CHC_L, STP_CHC_H);
+                setPwm(0, STP_CHD_L, STP_CHD_H);
             }
         } else {
             if (dir) {
-                setPwm(12, STP_CHA_L, STP_CHA_H);
-                setPwm(14, STP_CHB_L, STP_CHB_H);
-                setPwm(13, STP_CHC_L, STP_CHC_H);
-                setPwm(15, STP_CHD_L, STP_CHD_H);
+                setPwm(4, STP_CHA_L, STP_CHA_H);
+                setPwm(6, STP_CHB_L, STP_CHB_H);
+                setPwm(5, STP_CHC_L, STP_CHC_H);
+                setPwm(7, STP_CHD_L, STP_CHD_H);
             } else {
-                setPwm(15, STP_CHA_L, STP_CHA_H);
-                setPwm(13, STP_CHB_L, STP_CHB_H);
-                setPwm(14, STP_CHC_L, STP_CHC_H);
-                setPwm(12, STP_CHD_L, STP_CHD_H);
+                setPwm(7, STP_CHA_L, STP_CHA_H);
+                setPwm(5, STP_CHB_L, STP_CHB_H);
+                setPwm(6, STP_CHC_L, STP_CHC_H);
+                setPwm(4, STP_CHD_L, STP_CHD_H);
             }
         }
     }
 
     function stopMotor(index: number) {
-        setPwm(index, 0, 0);
-        setPwm(index + 1, 0, 0);
+        setPwm((index - 1) * 2, 0, 0);
+        setPwm((index - 1) * 2 + 1, 0, 0);
     }
     /**
      * *****************************************************************
@@ -261,7 +261,7 @@ namespace MY_SuperBit12 {
         // 50hz: 20,000 us
         let us = (value * 1800 / 180 + 600); // 0.6 ~ 2.4
         let pwm = us * 4096 / 20000;
-        setPwm(num, 0, pwm);
+        setPwm(num + 7, 0, pwm);
 
     }
 
@@ -276,7 +276,7 @@ namespace MY_SuperBit12 {
         let newvalue = Math.map(value, 0, 270, 0, 180);
         let us = (newvalue * 1800 / 180 + 600); // 0.6 ~ 2.4
         let pwm = us * 4096 / 20000;
-        setPwm(num, 0, pwm);
+        setPwm(num + 7, 0, pwm);
 
     }
 
@@ -292,17 +292,17 @@ namespace MY_SuperBit12 {
         if (pos == enPos.stop) {
             let us = (86 * 1800 / 180 + 600); // 0.6 ~ 2.4
             let pwm = us * 4096 / 20000;
-            setPwm(num, 0, pwm);
+            setPwm(num + 7, 0, pwm);
         }
         else if(pos == enPos.forward){ //0-90 -> 90 - 0
             let us = ((90-value) * 1800 / 180 + 600); // 0.6 ~ 2.4
             let pwm = us * 4096 / 20000;
-            setPwm(num, 0, pwm);
+            setPwm(num + 7, 0, pwm);
         }
         else if(pos == enPos.reverse){ //0-90 -> 90 -180
             let us = ((90+value) * 1800 / 180 + 600); // 0.6 ~ 2.4
             let pwm = us * 4096 / 20000;
-            setPwm(num, 0, pwm);
+            setPwm(num + 7, 0, pwm);
         }
 
        
