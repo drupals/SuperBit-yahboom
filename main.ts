@@ -6,7 +6,7 @@ load dependency
 */
 
 //% color="#ECA40D" weight=20 icon="\uf085"
-namespace MY_SuperBit10 {
+namespace MY_SuperBit12 {
 
     const PCA9685_ADD = 0x40
     const MODE1 = 0x00
