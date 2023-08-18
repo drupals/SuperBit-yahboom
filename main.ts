@@ -6,7 +6,7 @@ load dependency
 */
 
 //% color="#ECA40D" weight=20 icon="\uf085"
-namespace SuperBit {
+namespace MY_SuperBit {
 
     const PCA9685_ADD = 0x40
     const MODE1 = 0x00
@@ -102,7 +102,7 @@ namespace SuperBit {
     
     export enum enServo {
         
-        S1 = 2,
+        S1 = 0,
         S2,
         S3,
         S4,
