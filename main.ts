@@ -102,7 +102,7 @@ namespace MY_SuperBit {
     
     export enum enServo {
         
-        S1 = 8,
+        S1 = 7,
         S2,
         S3,
         S4,
@@ -114,8 +114,8 @@ namespace MY_SuperBit {
     export enum enMotors {
         M1 = 3,
         M2 = 4,
-        M3 = 1,
-        M4 = 2
+        M3 = 5,
+        M4 = 6
     }
 
     function i2cwrite(addr: number, reg: number, value: number) {
