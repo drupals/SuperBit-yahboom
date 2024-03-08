@@ -112,9 +112,9 @@ namespace MY_SuperBit_test {
         S8 = 0x08
     }
     export enum enMotors {
-        M1 = 0x7,
-        M2 = 0x1,
-        M3 = 0x5,
+        M1 = 0x08,
+        M2 = 0x0A,
+        M3 = 0x0,
         M4 = 0x3
     }
 
@@ -217,7 +217,7 @@ namespace MY_SuperBit_test {
     export function RGB_Program(): neopixel.Strip {
          
         if (!yahStrip) {
-            yahStrip = neopixel.create(DigitalPin.P12, 4, NeoPixelMode.RGB);
+            yahStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB);
         }
         return yahStrip;  
     } 
