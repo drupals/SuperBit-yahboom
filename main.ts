@@ -203,8 +203,8 @@ namespace MY_SuperBit_test {
     }
 
     function stopMotor(index: number) {
-        setPwm((index - 1) * 2, 0, 0);
-        setPwm((index - 1) * 2 + 1, 0, 0);
+        setPwm(index, 0, 0);
+        setPwm(index + 1, 0, 0);
     }
     /**
      * *****************************************************************
