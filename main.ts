@@ -115,7 +115,7 @@ namespace MY_SuperBit_test {
         M1 = 0x3,
         M2 = 0x5,
         M3 = 0x1,
-        M4 = 0x7
+        M4 = 0x9
     }
 
     function i2cwrite(addr: number, reg: number, value: number) {
